@@ -1,0 +1,44 @@
+{
+    "mcservers": {
+        "enabled": true,
+        "title": "Skyfall [Vanilla][SMP] {EU}{18+}{Bedrock/Java 1.19.2}{Custom Economy}{Whitelist}{Fresh Community}",
+        "flair": "Vanilla",
+        "discordAllowed": true,
+        "frequency": "weekly"
+    },
+    "MinecraftBuddies": {
+        "enabled": false,
+        "title": "Skyfall [Vanilla] [BEDROCK] [JAVA] [18+] [EU] [Whitelist]",
+        "flair": "Java-Hosting",
+        "discordAllowed": false,
+        "frequency": "daily"
+    },
+    "MinecraftServer": {
+        "enabled": true,
+        "title": "Skyfall | 18+ | EU | Vanilla | New SMP | Bedrock/Java 1.19.2 | Custom Economy | Whitelisted",
+        "flair": "Advertising",
+        "discordAllowed": true,
+        "frequency": "daily"
+    },
+    "MinecraftServerFinder": {
+        "enabled": true,
+        "title": "Skyfall | 18+ | EU | Vanilla | New SMP | Bedrock/Java 1.19.2 | Custom Economy | Whitelisted",
+        "flair": "Advertising",
+        "discordAllowed": true,
+        "frequency": "daily"
+    },
+    "MCVanillaServers": {
+        "enabled": true,
+        "title": "Skyfall | 18+ | EU | Vanilla | New SMP | Bedrock/Java 1.19.2 | Custom Economy | Whitelisted",
+        "flair": "",
+        "discordAllowed": true,
+        "frequency": "daily"
+    },
+    "smp": {
+        "enabled": true,
+        "title": "Skyfall | 18+ | EU | Vanilla | New SMP | Bedrock/Java 1.19.2 | Custom Economy | Whitelisted",
+        "flair": "",
+        "discordAllowed": false,
+        "frequency": "weekly"
+    }
+}
