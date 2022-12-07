@@ -130,5 +130,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-credentialsbackup.json
 credentials.json
+credentialsbackup.json
