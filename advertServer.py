@@ -1,4 +1,5 @@
 import praw
+from prawcore import RequestException
 import json
 import schedule
 import datetime
@@ -83,6 +84,12 @@ schedule.every().day.at("18:00").do(post, "daily")
 logMan("Skyfall Poster is up and running!")
 
 while True:
-    schedule.run_pending()
-    checkMessages()
-    time.sleep(5)
+    try:
+        schedule.run_pending()
+        checkMessages()
+        time.sleep(10)
+    except RequestException as exception:
+        logMan(str(exception))
+
+
+    

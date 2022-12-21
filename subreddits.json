@@ -7,7 +7,7 @@
         "frequency": "weekly"
     },
     "MinecraftBuddies": {
-        "enabled": false,
+        "enabled": true,
         "title": "Skyfall [Vanilla] [BEDROCK] [JAVA] [18+] [EU] [Whitelist]",
         "flair": "Java-Hosting",
         "discordAllowed": false,
@@ -31,7 +31,7 @@
         "enabled": true,
         "title": "Skyfall | 18+ | EU | Vanilla | New SMP | Bedrock/Java 1.19.2 | Custom Economy | Whitelisted",
         "flair": "",
-        "discordAllowed": true,
+        "discordAllowed": false,
         "frequency": "daily"
     },
     "smp": {

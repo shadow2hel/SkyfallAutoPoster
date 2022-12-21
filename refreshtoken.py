@@ -10,11 +10,15 @@ This tool can be used to conveniently create refresh tokens for later use with y
 application OAuth2 credentials.
  
 """
+import json
 import random
 import socket
 import sys
  
 import praw
+
+with open("credentials.json") as f:
+    creds = json.load(f)
  
  
 def receive_connection():
@@ -45,32 +49,32 @@ def main():
         "Go here while logged into the account you want to create a token for: "
         "https://www.reddit.com/prefs/apps/"
     )
-    print(
-        "Click the create an app button. Put something in the name field and select the"
-        " script radio button."
-    )
-    print("Put http://localhost:8080 in the redirect uri field and click create app")
-    client_id = input(
-        "Enter the client ID, it's the line just under Personal use script at the top: "
-    )
-    client_secret = input("Enter the client secret, it's the line next to secret: ")
-    commaScopes = input(
-        "Now enter a comma separated list of scopes, or all for all tokens: "
-    )
+    # print(
+    #     "Click the create an app button. Put something in the name field and select the"
+    #     " script radio button."
+    # )
+    # print("Put http://localhost:8080 in the redirect uri field and click create app")
+    # client_id = input(
+    #     "Enter the client ID, it's the line just under Personal use script at the top: "
+    # )
+    # client_secret = input("Enter the client secret, it's the line next to secret: ")
+    # commaScopes = input(
+    #     "Now enter a comma separated list of scopes, or all for all tokens: "
+    # )
  
-    if commaScopes.lower() == "all":
-        scopes = ["*"]
-    else:
-        scopes = commaScopes.strip().split(",")
+    # if commaScopes.lower() == "all":
+    #     scopes = ["*"]
+    # else:
+    #     scopes = commaScopes.strip().split(",")
  
     reddit = praw.Reddit(
-        client_id=client_id.strip(),
-        client_secret=client_secret.strip(),
+        client_id=creds["client_id"],
+        client_secret=creds["client_secret"],
         redirect_uri="http://localhost:9090",
         user_agent="praw_refresh_token_example",
     )
     state = str(random.randint(0, 65000))
-    url = reddit.auth.url(scopes, state, "permanent")
+    url = reddit.auth.url(creds["scopes"], state, "permanent")
     print(f"Now open this url in your browser: {url}")
     sys.stdout.flush()
  
